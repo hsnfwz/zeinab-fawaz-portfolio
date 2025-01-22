@@ -777,6 +777,14 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-\[49px\] {
+  padding-bottom: 49px;
+}
+
+.pb-\[48px\] {
+  padding-bottom: 48px;
+}
+
 .text-center {
   text-align: center;
 }
