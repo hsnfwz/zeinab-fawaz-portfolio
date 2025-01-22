@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeinab Fawaz</title>
+    <link href="output.css" rel="stylesheet">
+  </head>
+
+  <body class="relative top-0">
+    <script>
+      function showNavViewMobile() {
+        const navMobile = document.querySelector('#nav-mobile');
+        navMobile.classList.add('hidden');
+        navMobile.classList.remove('flex');
+
+        const navView = document.querySelector('#nav-view');
+        navView.classList.add('flex');
+        navView.classList.remove('hidden');
+
+        const body = document.querySelector('body');
+        body.classList.add('overflow-hidden');
+        body.classList.add('overflow-auto');
+      }
+
+      function hideNavViewMobile() {
+        const navMobile = document.querySelector('#nav-mobile');
+        navMobile.classList.add('flex');
+        navMobile.classList.remove('hidden');
+
+        const navView = document.querySelector('#nav-view');
+        navView.classList.add('hidden');
+        navView.classList.remove('flex');
+
+        const body = document.querySelector('body');
+        body.classList.add('overflow-auto');
+        body.classList.remove('overflow-hidden');
+      }
+    </script>
+
+    <nav id="nav-desktop" class="w-full hidden lg:flex justify-center border-b-[1px] border-b-neutral-200 text-xs sticky top-0 bg-white z-10">
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#">Home</a>
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#about-me">About Me</a>
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#graphic-design">Graphic Design</a>
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#photography">Photography</a>
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#videography">Videography</a>
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#major-collaborations">Major Collaborations</a>
+      <a class="p-4 bg-white hover:bg-neutral-200" href="#contact-me">Contact Me</a>
+    </nav>
+
+    <nav id="nav-mobile" class="w-full lg:hidden flex flex-col sticky top-0 border-b-[1px] border-b-neutral-200 z-10 bg-white">
+      <button class="hover:bg-neutral-200 p-4 self-end" type="button" onclick="showNavViewMobile()" id="show-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+
+    <nav id="nav-view" class="hidden flex-col fixed top-0 w-full h-screen bg-white">
+      <button class="hover:bg-neutral-200 p-4 self-end" type="button" onclick="hideNavViewMobile()" id="hide-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="w-full flex flex-col border-t-[1px] border-t-neutral-200">
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#">Home</a>
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#about-me">About Me</a>
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#graphic-design">Graphic Design</a>
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#photography">Photography</a>
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#videography">Videography</a>
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#major-collaborations">Major Collaborations</a>
+        <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#contact-me">Contact Me</a>
+      </div>
+    </nav>
+
+    <main class="w-full flex flex-col gap-4 p-2 max-w-screen-lg m-auto">
+      <section id="home" class="w-full h-screen flex flex-col lg:flex-row lg:justify-between items-center gap-8">
+        <h1 class="text-5xl lg:text-9xl text-center flex flex-col">
+          <div><span class="text-[#dbcdca]">Z</span>einab </div>
+          <div>Fawa<span class="text-[#dbcdca]">z</span></div>
+        </h1>
+        <img class="w-full max-w-[400px] bg-[#dbcdca]" src="assets/images/portfolio/headshot.png" alt="headshot" width="" height="" />
+      </section>
+      <section id="about-me" class="w-full h-screen flex flex-col justify-center items-center gap-8">
+        <h1 class="text-5xl text-center">About Me</h1>
+        <div class="flex flex-col gap-4 text-center">
+          <p>
+            Hey there! My name is Zeinab Fawaz, and I am an Arts student currently pursuing a career within the Communications field. I have 2+ years of experience in social media coordination and management derived from volunteer work.
+          </p>
+          <p>
+            I am an enthusiastic individual with a deep passion for social media and content creation. Currently, I volunteer as a social media coordinator for my community organization, where I plan and advertise social, religious, and educational events. My absolute favourite part about this role is capturing memories during events behind an iPhone and DSLR camera and later compiling them into engaging and meaningful content!
+          </p>
+        </div>
+      </section>
+      <section id="graphic-design" class="w-full h-screen flex flex-col justify-center items-center gap-8">
+        <img class="w-full h-full max-w-48 max-h-48" src="assets/images/graphics/brush.png" alt="brush" />
+        <div class="flex flex-col gap-4">
+          <h1 class="text-5xl text-center">Graphic Design</h1>
+          <h3 class="text-2xl text-center">Designed with Canva</h3>
+        </div>
+      </section>
+      <section class="w-full flex flex-col gap-2">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
+          <img class="w-full" src="assets/images/portfolio/strength-and-spirit-poster.png" alt="strength-and-spirit" width="" height="" />
+          <img class="w-full" src="assets/images/portfolio/sports-day-bbq-poster.png" alt="sports-day-bbq-poster" width="" height="" />
+          <img class="w-full" src="assets/images/portfolio/muharram-sponsorship-poster.png" alt="muharram-sponsorship-poster" width="" height="" />
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <img class="w-full" src="assets/images/portfolio/shaykh-azhar-nasser-gala-dinner-poster.png" alt="gala-dinner" width="" height="" />
+          <img class="w-full" src="assets/images/portfolio/jalal-moughania-workshop-poster.png" alt="interactive-workshop" width="" height="" />
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
+          <img class="w-full" src="assets/images/portfolio/martyrdom-poster.png" alt="martyrdom-poster" width="" height="" />
+          <img class="w-full" src="assets/images/portfolio/picnic-at-the-park-poster.png" alt="picnic-at-the-park-poster" width="" height="" />
+          <img class="w-full" src="assets/images/portfolio/book-mockup-poster.png" alt="book-mockup-poster" width="" height="" />
+        </div>
+      </section>
+      <section id="photography" class="w-full h-screen flex flex-col justify-center items-center gap-8">
+        <img class="w-full h-full max-w-48 max-h-48" src="assets/images/graphics/camera.png" alt="camera" />
+        <div class="flex flex-col gap-4">
+          <h1 class="text-5xl text-center">Photography</h1>
+          <h3 class="text-2xl text-center">Taken with DSLR Camera</h3>
+        </div>
+      </section>
+      <section class="w-full flex flex-col gap-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <img src="assets/images/portfolio/imam-ali-gala-1.jpg" alt="imam-ali-gala-1" width="" height="" />
+          <img src="assets/images/portfolio/imam-ali-gala-5.jpg" alt="imam-ali-gala-5" width="" height="" />
+
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <img src="assets/images/portfolio/imam-ali-gala-2.jpg" alt="imam-ali-gala-2" width="" height="" />
+          <img src="assets/images/portfolio/imam-ali-gala-4.jpg" alt="imam-ali-gala-4" width="" height="" />
+
+        </div>
+      </section>
+      <section id="videography" class="w-full h-screen flex flex-col justify-center items-center gap-8">
+        <video class="w-full h-full max-w-48 max-h-48" src="assets/videos/graphics/wheel.mp4" alt="wheel" width="" height="" autoplay muted loop>
+          <source
+            src="assets/videos/graphics/wheel.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="flex flex-col gap-4">
+          <h1 class="text-5xl text-center">Videography</h1>
+          <h3 class="text-2xl text-center">Taken with iPhone 12 and edited using CapCut and InShot.</h3>
+        </div>
+      </section>
+      <section class="w-full flex flex-col gap-16">
+        <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
+          <video class="w-full max-w-80 h-full order-2 lg:order-1" src="assets/videos/portfolio/workshop.mp4" alt="workshop" width="" height="" autoplay muted controls>
+            <source
+              src="assets/videos/portfolio/workshop.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="flex flex-col gap-2 text-center order-1 lg:order-2">
+            <h2 class="text-2xl">Workshop</h2>
+            <p>An interactive workshop discussing the framework of building a successful future through an Islamic lense.</p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
+          <div class="flex flex-col gap-2 text-center">
+            <h2 class="text-2xl">Gala Dinner</h2>
+            <p>A festive gala dinner hosted in honour of celebrating the birth anniversary of Imam Ali.</p>
+          </div>
+          <video class="w-full max-w-80 h-full" src="assets/videos/portfolio/gala-dinner.mp4" alt="gala-dinner" width="" height="" autoplay muted controls>
+            <source
+              src="assets/videos/portfolio/gala-dinner.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
+          <video class="w-full max-w-80 h-full order-2 lg:order-1" src="assets/videos/portfolio/eid-al-tahreer.mp4" alt="eid-al-tahreer" width="" height="" autoplay muted controls>
+            <source
+              src="assets/videos/portfolio/eid-al-tahreer.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="flex flex-col gap-2 text-center order-1 lg:order-2">
+            <h2 class="text-2xl">Eid Al-Tahreer</h2>
+            <p>A joyous social event hosted in celebrating the rich history and heritage of Lebanese Independence Day.</p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
+          <div class="flex flex-col gap-2 text-center">
+            <h2 class="text-2xl">Bazaar</h2>
+            <p>An excerpt of a community bazaar exhibition showcasing various talents and businesses in support of raising funds for displaced families in Lebanon.</p>
+          </div>
+          <video class="w-full max-w-80 h-full" src="assets/videos/portfolio/bazaar.mov" alt="bazaar" width="" height="" autoplay muted controls>
+            <source
+              src="assets/videos/portfolio/bazaar.mov"
+              type="video/mov"
+            />
+          </video>
+        </div>
+        <div class="flex flex-col gap-8 justify-center items-center">
+          <h2 class="text-2xl text-center">Lego Stop Motion Film</h2>
+          <video src="assets/videos/portfolio/no-way-in.mp4" alt="no-way-in" width="" height="" autoplay muted controls>
+            <source
+              src="assets/videos/portfolio/no-way-in.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="text-center">A creative digital story shedding light on the current events taking place in Palestine told using Stop Motion Studio.</p>
+        </div>
+      </section>
+      <section id="major-collaborations" class="w-full h-screen flex flex-col justify-center items-center">
+        <img class="w-full h-full max-w-48 max-h-48" src="assets/images/graphics/together.png" alt="together" />
+        <h1 class="text-5xl text-center">Major Collaborations</h1>
+      </section>
+      <section class="w-full flex flex-col lg:flex-row justify-between items-center gap-8">
+        <div class="flex flex-col gap-4">
+          <img class="w-full max-w-80 aspect-square rounded-full" src="assets/images/portfolio/jalal-moughania.jpg" alt="jalal-moughania" width="" height="" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-2xl text-center">Jalal Moughania</h2>
+            <p class="text-center">155K Followers</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <img class="w-full max-w-80 aspect-square rounded-full" src="assets/images/portfolio/sheikh-azhar-nasser.jpg" alt="sheikh-azhar-nasser" width="" height="" />
+          <div class="flex flex-col gap-2">
+            <h2 class="text-2xl text-center">Shaykh Azhar Nasser</h2>
+            <p class="text-center">121K Followers</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact-me" class="w-full h-screen flex flex-col gap-8 justify-center items-center">
+        <h1 class="text-5xl text-center">Contact</h1>
+        <div class="w-full flex flex-col gap-4">
+          <h3 class="text-2xl text-center">Email</h3>
+          <a class="text-center self-center w-full max-w-48 p-4 border-[1px] border-neutral-200 bg-white hover:bg-neutral-200" href="mailto:zfa38@sfu.ca" target="_blank">zfa38@sfu.ca</a>
+        </div>
+        <div class="w-full flex flex-col gap-4">
+          <h3 class="text-2xl text-center">LinkedIn</h3>
+          <a class="text-center self-center w-full max-w-48 p-4 border-[1px] border-neutral-200 bg-white hover:bg-neutral-200" href="https://www.linkedin.com/in/zeinabf" target="_blank">zeinabf</a>
+        </div>
+      </section>
+    </main>
+    <footer class="w-full flex justify-center p-4">
+      <p class="text-xs text-center">Designed by <a class="hover:text-neutral-200 underline" href="https://www.linkedin.com/in/zeinabf" target="_blank">Zeinab Fawaz</a>. Developed by <a class="hover:text-neutral-200 underline" href="https://www.linkedin.com/in/hsnfwz" target="_blank">Hussein Fawaz</a></p>
+    </footer>
+  </body>
+</html>
