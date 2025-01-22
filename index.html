@@ -56,13 +56,15 @@
       </button>
     </nav>
 
-    <nav id="nav-view" class="hidden flex-col fixed top-0 w-full min-h-screen bg-white">
-      <button class="hover:bg-neutral-200 p-4 self-end" type="button" onclick="hideNavViewMobile()" id="hide-button">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <div class="w-full flex flex-col border-t-[1px] border-t-neutral-200">
+    <nav id="nav-view" class="hidden flex-col fixed top-0 w-full h-screen bg-white z-10 overflow-y-scroll">
+      <div class="w-full flex justify-end border-b-[1px] border-b-neutral-200 sticky top-0 z-20">
+        <button class="hover:bg-neutral-200 p-4" type="button" onclick="hideNavViewMobile()" id="hide-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full flex flex-col">
         <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#">Home</a>
         <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#about-me">About Me</a>
         <a class="p-4 bg-white hover:bg-neutral-200" onclick="hideNavViewMobile()" href="#graphic-design">Graphic Design</a>
