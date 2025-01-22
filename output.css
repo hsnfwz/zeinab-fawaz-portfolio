@@ -594,6 +594,10 @@ video {
   margin: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -767,6 +771,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
